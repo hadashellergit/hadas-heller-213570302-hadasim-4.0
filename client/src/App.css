@@ -1,0 +1,40 @@
+body{
+  /*background-image: url("./corona.jpg");*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.App{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index:99;
+  background-color: blue;
+  display: grid;
+  grid-gap: 15px;
+}
+.dashboard-div{
+  background-color: aquamarine;
+  border-radius: 5px;
+  overflow: auto;
+}
+#first-div{
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+#second-div{
+  grid-column: 3 ;
+  grid-row: 1 / 4;
+}
+#third-div{
+  grid-column: 1 ;
+  grid-row: 2/4;
+}
+#fourth-div{
+  grid-column: 2;
+  grid-row: 3/4;
+}
+#fifth-div{
+  grid-column: 2;
+  grid-row: 2/3;
+}
