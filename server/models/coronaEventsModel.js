@@ -5,6 +5,7 @@ const fs = require('fs');
 //GET
 const find = async () => {
   try {
+    //fetch evey row in the corona data 
     const coronaData = await db.query('SELECT * FROM coronadata');
     return coronaData;
   } catch (error) {
@@ -15,6 +16,7 @@ const find = async () => {
 //getChartData
 const findChartData = async () => {
   try {
+    //this query generate a object showing the number of sick members for each date within the last 30 days
     const query = `
     SELECT 
     DATE(subdate(CURDATE(), interval d.day_number day)) AS date,
@@ -56,8 +58,6 @@ AND (t.recovery_date IS NULL OR DATE(t.recovery_date) > DATE(subdate(CURDATE(), 
 WHERE DATE(subdate(CURDATE(), interval d.day_number day)) >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)
 GROUP BY DATE(subdate(CURDATE(), interval d.day_number day))
 ORDER BY DATE(subdate(CURDATE(), interval d.day_number day));
-
-
     `;
     
     const data = await db.query(query);
@@ -69,18 +69,21 @@ ORDER BY DATE(subdate(CURDATE(), interval d.day_number day));
 
   };
   const findById = async (id) => {
+    //get the data od the corona event of the member with the given id
     return await db.query('SELECT * FROM coronadata WHERE member_id = ?', [id]);
   };
   
 //POST
 const create = async (coronaEventData) => {
- 
   try {
+    //create obj to simplfy the next  query
     const { member_id, positive_test_date, recovery_date } = coronaEventData;
     const values = [member_id, positive_test_date, recovery_date];
+    //if the ui didnt send a recovery data (maybe member is still sick) insert only id ans positive test date
     if (!recovery_date) {
      await db.query('INSERT INTO coronadata (member_id, positive_test_date) VALUES (?, ?)', [member_id, positive_test_date]);  
     }
+    //insert every column in table
     else{
      await db.query('INSERT INTO coronadata (member_id, positive_test_date, recovery_date) VALUES (?, ?, ?)', values);
     }
@@ -89,10 +92,6 @@ const create = async (coronaEventData) => {
     throw error;
   }
 };
-/*
-const update = async (coronaEventData) => {
-  await db.query('UPDATE coronadata SET recovery_date = ? WHERE member_id = ?', [coronaEventData.recovery_date, coronaEventData.member_id]);
-};*/
 
 module.exports = {
   find,

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-
+//this component is self explanatory
 const UnVaccinatedMembers = () => {
     const [count, setCount] = useState();
 
@@ -23,8 +23,7 @@ const UnVaccinatedMembers = () => {
     return (
         <div>
             <h2>unVaccinated </h2>
-            <div>{count}</div>
-          
+            <div>{count}</div>        
         </div>
     );
 };

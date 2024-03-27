@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const memberController = require('../controllers/memberController');
-const multer = require('multer'); // Import multer
-
-// Configure multer for handling file uploads
+//used for the img upload
+const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
+
 //GET
 router.get('/getAllMembers', memberController.getAllMembers);
 

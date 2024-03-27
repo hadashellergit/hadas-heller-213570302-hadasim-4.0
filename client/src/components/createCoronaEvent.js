@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-//import './styles.css'; // Import the CSS file
-import '../style/tableStyle.css';
+
 const CreateCoronaEvent = () => {
   const [formData, setFormData] = useState({
     member_id:'',
@@ -17,13 +16,8 @@ const CreateCoronaEvent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/api/corona/coronaEvent', formData); // Change the URL as per your backend endpoint
-      // Reset form after successful submission
-      setFormData({
-        member_id:'',
-        positive_test_date: '',
-        recovery_date: '',
-      });
+      //send http to posst corona data in table
+      await axios.post('http://localhost:3001/api/corona/coronaEvent', formData); 
       alert('Event created successfully!');
     } catch (error) {
         setFormData({
@@ -32,19 +26,57 @@ const CreateCoronaEvent = () => {
             recovery_date: '',
           });
       console.error('Error creating event:', error);
-      alert('An error occurred creating event. Please try again.',error);
-
-      
+      console.log(error);
+      alert(error.response.data.error || 'An error occurred');
     }
+    //empty form fields
+    setFormData({
+      member_id:'',
+      positive_test_date: '',
+      recovery_date: '',
+    });
  
   };
 
   return (
     <div className="app-container">
       <form className="form-container" onSubmit={handleSubmit}>
-        <input type="text" className="input-field" name="member_id" placeholder="ID" value={formData.id} onChange={handleChange} />
-        <input type="date" className="input-field" name="positive_test_date" placeholder="Positive Test Date" value={formData.positive_test_date} onChange={handleChange} />
-        <input type="date" className="input-field" name="recovery_date" placeholder="Recovery Date" value={formData.recovery_date} onChange={handleChange} />
+        <form>
+  <div className="form-group">
+    <label htmlFor="member_id">ID:</label>
+    <input
+      type="text"
+      className="input-field"
+      id="member_id"
+      name="member_id"
+      value={formData.id}
+      onChange={handleChange}
+    />
+  </div>
+  <div className="form-group">
+    <label htmlFor="positive_test_date">Positive Test Date:</label>
+    <input
+      type="date"
+      className="input-field"
+      id="positive_test_date"
+      name="positive_test_date"
+      value={formData.positive_test_date}
+      onChange={handleChange}
+    />
+  </div>
+  <div className="form-group">
+    <label htmlFor="recovery_date">Recovery Date:</label>
+    <input
+      type="date"
+      className="input-field"
+      id="recovery_date"
+      name="recovery_date"
+      value={formData.recovery_date}
+      onChange={handleChange}
+    />
+  </div>
+</form>
+
         <button type="submit" className="submit-button">Create</button>
       </form>
     </div>

@@ -12,7 +12,9 @@ const Graph = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                //fetch an object that contains the list of the past 30 days and how many members were sick
                 const response = await axios.get('http://localhost:3001/api/corona/getCoronaChartData');
+                //set data to be the fetched object
                 setData(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -23,18 +25,16 @@ const Graph = () => {
     }, []);
 
     useEffect(() => {
-        console.log('Data:', data); // Log the fetched data
-        console.log('Chart Data:', chartData); // Log the constructed chart data
+        console.log('bebkebke', chartData); 
     }, [data]);
 
-    // Constructing the chart data object
+    // constructing the chart data object
     const chartData = {
         labels: data.map(item => new Date(item.date)),       
         datasets: [
             {
                 label: "First dataset",
                 data: data.map(item => item.sick_members_count),
-                //data:[1,2,5,4,6,5,3,2,4,5,6,7,8,9,8,7,6,5,4,3,2,3,4,5,6,1,7,6,5,4],
                 fill: true,
                 backgroundColor: "rgba(75,192,192,0.2)",
                 borderColor: "rgba(75,192,192,1)"
@@ -42,12 +42,13 @@ const Graph = () => {
         ]
     };
 
+    //line properties ect
     const options = {
         scales: {
             x: {
-                type: 'time', // Use 'time' type for dates
+                type: 'time', 
                 time: {
-                    unit: 'day' // Set the time unit to 'day'
+                    unit: 'day' 
                 }
             },
             y: {
@@ -58,9 +59,8 @@ const Graph = () => {
 
     return (
         <div>
-            <h2>Sick Patients Count - Last 30 Days</h2>
-            <Line data={chartData} options={options} />
-            
+            <h3>30 days sick member count</h3>
+            <Line data={chartData} options={options} />           
         </div>
     );
 };

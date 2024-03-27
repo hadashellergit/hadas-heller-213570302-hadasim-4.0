@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../style/tableStyle.css';
 
 const MemberListTable = () => {
+
+  //the member list
   const [members, setMembers] = useState([]);
   const [file, setFile] = useState();
+  
+  //a bool variable to show post vaccination div
   const [showModal, setShowModal] = useState(false);
+
+  //variables to post in vaccination table
   const [vaccination_date, setVaccinationDate] = useState('');
   const [vaccination_type, setVaccinationType] = useState('');
   const [member_id, setId] = useState('');
@@ -26,6 +31,7 @@ const MemberListTable = () => {
 
   const uploadImage = async (memberId) => {
     try {
+      //if file is empty 
       if (!file) {
         return alert('Please select an image to upload.');
       }
@@ -33,7 +39,7 @@ const MemberListTable = () => {
       const formData = new FormData();
       formData.append('image', file);
       formData.append('memberId', memberId);
-
+      //send the img file to server
       const response = await axios.post('http://localhost:3001/api/member/uploadImage', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -51,6 +57,7 @@ const MemberListTable = () => {
     setFile(event.target.files[0]);
   };
 
+  //when clicked the relevent id will be stored and the post vaccination div will apeaer
   const handlePostVaccination = (memberId) => {
     setId(memberId);
     setShowModal(true);
@@ -61,15 +68,14 @@ const MemberListTable = () => {
     e.preventDefault();
     try {
       const vaccinData =  { member_id,vaccination_date, vaccination_type} ;
-      console.log("vvaa",vaccinData)
       await axios.post('http://localhost:3001/api/vaccinations/createVaccination', vaccinData); 
-      setVaccinationDate('');
-      setVaccinationType('');
       alert('vacc post successfully!');
     } catch (error) {
       console.error('Error posting vacc:', error);
       alert('An error occurred while posting vacc. Please try again.',error);
     }
+    setVaccinationDate('');
+    setVaccinationType('');
   };
 
   return (
