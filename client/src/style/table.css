@@ -22,9 +22,26 @@
         border-radius: 5px;
         transition: border-color 0.3s;
       }
-    
+      .modal-content label{
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
  
-      
+    .modal-content button{
+        background-color: #4CAF50;
+        color: white;
+        padding: 6px 1px;
+        margin-top: 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: background-color 0.3s;
+        width: calc(100% - 9px); /* Set width to 100% minus padding and borders */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+    }  
   
   .member-table {
     width: 100%;
@@ -61,12 +78,12 @@
   
   .modal-content {
     background-color: #fefefe;
-    margin: 20% auto;
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 60%;
+    width: 30%;
   }
-  
+  .modal-content 
   .close-button {
     color: #aaa;
     float: right;
@@ -78,7 +95,27 @@
   .close-button:hover {
     color: black;
   }
+.modal-content label{
+    font-size: 13px;
+    padding-top: 15px;
+}
+    
+  /* Input Field */
+  .modal-content input{
+    width: calc(100% - 22px); /* Set width to 100% minus padding and borders */
+    padding: 7px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    font-size: 10px;
+    opacity: 0.8;
+    margin-top: 3px;
+    margin-bottom: 4px;
+  }
   
+  .modal-content input:focus {
+    border-color: #4CAF50;
+  }
   /* Adjust this style for better responsiveness */
   @media screen and (max-width: 600px) {
     .modal-content {
