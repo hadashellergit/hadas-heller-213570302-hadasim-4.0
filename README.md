@@ -1,6 +1,7 @@
-# ex1 - For the twittertower ex i used c# 
+# ex1 twitterTower
+## I used c#. the code is in the file TrittweTower.cs
 
-# x2 - Hmo corona managment system
+# ex2 corona managment 
 
 ## Overview
 

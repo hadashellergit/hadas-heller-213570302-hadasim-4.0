@@ -40,7 +40,6 @@ const createCoronaEvent = async (req,res)=>{
     ) {
       throw new Error("dates are invalid or don't make sense");
     }
-   
     //send the request body to service to post corona event
     const newCoronaEv = await coronaService.createCoronaEvent(req.body);
     res.status(201).json(newCoronaEv);
