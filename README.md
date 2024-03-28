@@ -37,6 +37,7 @@ The project has the following folder structure:
 - http://localhost:3001/api/corona/coronaEvent -  POST a positive date and id and an optinal recovery date (the route map the http request and to the requiered controller);
 - http://localhost:3001/api/corona/getCoronaChartData - GET an object with the fileds date and count (...) 
 - http://localhost:3001/api/member/getAllMembers - GET all the row from personal data table (...)
+- - http://localhost:3001/api/member/:id - GET member object that has the given id (...)
 - http://localhost:3001/api/member/uploadImage - POST the img in as blob objevt in table (...)
 - http://localhost:3001/api/vaccinations/createVaccination - POST vaccine data (...)
 - http://localhost:3001/api/member/createMember - POST new member in to the members table (...)
