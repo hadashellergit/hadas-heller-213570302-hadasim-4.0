@@ -72,8 +72,28 @@ The database schema consists of the following tables:
 - **React**: Used for building the frontend user interface.
 - **MySQL**: The chosen relational database management system for storing application data.
 
+
+## the dashboard
+![Alt text](/theReadMeImg/dashBoard.png "Optional title")
+
+## the member list is displayed with the user data and two options, uplaoding img ot posting a vaccination data
+![Alt text](/theReadMeImg/memberTable.png "Optional title")
+ 
+ ## vaccination data womdow will apear for user to use
+![Alt text](/theReadMeImg/vaccination.png "Optional title")
+
+## the ui user can post corona data positive test date and recovery (or only positve test date)
+![Alt text](/theReadMeImg/coronaEvent.png "Optional title")
+
+## there will be dislayed a graph with the count of sick patients for the past 30 days
+![Alt text](/theReadMeImg/chart.png "Optional title")
+
+## and a pie chart of the ercantage of un vaccinated members out of the members
+![Alt text](/theReadMeImg/unVaccinated.png "Optional title")
+
 ## database diagram
 ![Alt text](/theReadMeImg/sqlDiagram.png "Optional title")
+
 
 
 
