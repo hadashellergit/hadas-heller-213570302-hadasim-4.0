@@ -14,6 +14,7 @@
 - npm install chartjs-adapter-date-fns
 
 
+
 # Architectural Specification
 
 ## Overview

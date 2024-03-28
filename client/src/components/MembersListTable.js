@@ -86,7 +86,7 @@ const MemberListTable = () => {
         <div className="modal">
           <div className="modal-content">
             <span className="close-button" onClick={() => setShowModal(false)}>X</span>
-            <h2>Post Vaccination</h2>
+            <h5>Post Vaccination</h5>
             <label>
               Corona Vaccination Date:
               <input type="date" value={vaccination_date} onChange={(e) => setVaccinationDate(e.target.value)} />
@@ -99,25 +99,26 @@ const MemberListTable = () => {
           </div>
         </div>
       )}
-      <h2 className="member-list-header">Member List</h2>
+      <h5 className="member-list-header">Member List</h5>
       <table className="member-table">
         <thead>
           <tr>
-            <th>id</th>
+            <th></th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Mobile Phone</th>
-            <th>Image</th>
+            <th></th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           {members.map((member) => (
             <tr key={member.id}>
-              <td>{member.id}</td>
+              <td><div className='pofile-img'>{member.image_data && <img src={`data:image/jpeg;base64,${member.image_data.toString('base64')}`} />}</div></td>
               <td>{member.first_name}</td>
               <td>{member.last_name}</td>
               <td>{member.mobile_phone}</td>
-              <td>{member.image_data && <img src={`data:image/jpeg;base64,${member.image_data.toString('base64')}`} />}</td>
               <td>
                 <input type="file" name="image" onChange={handleFileChange} />
               </td>

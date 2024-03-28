@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../style/corona.css'
 
 const CreateCoronaEvent = () => {
   const [formData, setFormData] = useState({
@@ -77,7 +78,7 @@ const CreateCoronaEvent = () => {
   </div>
 </form>
 
-        <button type="submit" className="submit-button2">Create</button>
+        <button type="submit" className="submit-button2">Create corona event</button>
       </form>
     </div>
   );

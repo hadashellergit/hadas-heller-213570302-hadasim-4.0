@@ -1,0 +1,42 @@
+/* Graph Container */
+.graph-container {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+  max-width: 800px; /* Set max-width to limit the width of the graph */
+  margin: 0 auto; /* Center the graph horizontally */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Graph Title */
+.graph-title {
+    
+        color: #606060;
+ margin-top: 0;
+    text-align: center;
+}
+
+/* Graph Section */
+.graph-section {
+  margin-bottom: px;
+}
+.chat-div{
+width: 100px;
+height: 130px;
+margin-left: 30%;
+}
+
+/* Graph Canvas */
+.graph-canvas {
+  width: 50%;
+  height: 50px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .graph-container {
+    padding: 15px; /* Reduced padding for smaller screens */
+    border-radius: 0; /* Remove border-radius for smaller screens */
+  }
+}

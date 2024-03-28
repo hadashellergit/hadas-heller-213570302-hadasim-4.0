@@ -49,7 +49,7 @@ const RegisterMemberForm = () => {
   return (
     <div>
     <div className="register-container">
-      <h2>Register Member</h2>
+      <h5>Register Member</h5>
       <form className="register-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="id">ID:</label>
@@ -101,7 +101,7 @@ const RegisterMemberForm = () => {
             required
           />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" className='but'>Register</button>
       </form>
     </div>
     </div>

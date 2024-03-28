@@ -1,36 +1,23 @@
-/* Register Member Form Container */
-h5{
-    color: #97b999;
-padding: 8px 3px;
-text-align: center;
-width: 94%;
-border-radius: 25px;
-box-shadow: rgb(226, 227, 228) 1px 1px 6px 0px inset, rgba(247, 247, 247, 0.5) -3px -3px 6px 1px inset;
-}
-table button{
-    background-color: #45a049;
-}
-.register-container {
+/* Corona Event Form Container */
+.app-container2 {
     background-color: #f7f7f7;
     padding: 20px;
     max-width: 600px; /* Set max-width to limit the width of the form */
     margin: 0 auto; /* Center the form horizontally */
+    border-radius: 25px;
   }
   
-  .register-container h2 {
-    color: #333;
-  }
-  
-  /* Register Form */
-  .register-form {
+  /* Form Container */
+  .form-container2 {
     width: 100%;
   }
   
-  .form-group {
+  /* Form Group */
+  .form-group2 {
     margin-bottom: 8px;
   }
   
-  .form-group label {
+  .form-group2 label {
     font-size: 12px;
     font-style: normal;
     display: block;
@@ -38,9 +25,8 @@ table button{
     margin-bottom: 2px;
   }
   
-  .form-group input[type="text"],
-  .form-group input[type="date"],
-  .form-group input[type="tel"] {
+  /* Input Field */
+  .input-field2 {
     width: calc(100% - 22px); /* Set width to 100% minus padding and borders */
     padding: 7px;
     border: 1px solid #d3d3d3;
@@ -50,12 +36,12 @@ table button{
     opacity: 0.8;
   }
   
-  .form-group input[type="text"]:focus,
-  .form-group input[type="date"]:focus,
-  .form-group input[type="tel"]:focus {
+  .input-field2:focus {
     border-color: #4CAF50;
   }
-  .but{
+  
+  /* Submit Button */
+  .submit-button2 {
     background-color: #4CAF50;
     color: white;
     padding: 10px 40px;
@@ -70,9 +56,8 @@ table button{
     border-radius: 5px;
     transition: border-color 0.3s;
   }
-
   
-.but:hover {
+  .submit-button2:hover {
     background-color: #45a049;
   }
   
