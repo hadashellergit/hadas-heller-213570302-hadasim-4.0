@@ -5,12 +5,9 @@ const validateForm = (formData, requiredFields) => {
 
   requiredFields.forEach(field => {
     if (!formData[field]) {
-      errors[field] = 'This field is required';
+      errors[field] = 'this field is required';
     }
   });
-
-  // You can add additional validations here...
-
   return errors;
 };
 
