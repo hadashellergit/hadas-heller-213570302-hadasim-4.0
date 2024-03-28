@@ -4,6 +4,9 @@ const Member = require('../models/memberModel');
 const getAllMembers = async () => {
   return await Member.find();
 };
+const getMemberById = async (memberId) => {
+  return await Member.findById();
+};
 
 //POST
 const uploadImage = async(memberId, imagePath)=>{
@@ -16,6 +19,7 @@ const createMember = async (memberData) => {
 
 module.exports = {
     getAllMembers,
+  getMemberById,
     uploadImage,
     createMember,
 };
