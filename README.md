@@ -82,6 +82,6 @@ The project has the following folder structure:
 ![Alt text](./client/theReadMeImg/dashBoard.png "Optional title")
 
 
-
+# ex2 part 2.1 and 2.2 is in the RequiermenetsRviewQA.pdf 
 
 
