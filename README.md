@@ -1,5 +1,5 @@
 # ex1 TwitterTower
-- I used c#. the code is in the file TwitterTower.cs (if you can execute is this it my git repository to the ex1 https://github.com/hadashellergit/hadas_heller_213570302_ex1)
+- I used c#. the code is in the file TwitterTower.cs (if you cant execute it this is my git repository to the ex1 https://github.com/hadashellergit/hadas_heller_213570302_ex1)
 
 # ex2 COVID management 
 
