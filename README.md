@@ -1,5 +1,5 @@
 # ex1 twitterTower
-## I used c#. the code is in the file TrittweTower.cs
+### I used c#. the code is in the file TrittweTower.cs
 
 # ex2 corona managment 
 
@@ -37,7 +37,7 @@ Routes define the API endpoints and map them to corresponding controller actions
 
 ### Services
 
-Services contain the application's business logic and perform operations that involve multiple models or complex processing. They abstract away the details of data manipulation from controllers.
+Services contain the application's business logic (for this assainment the services were barly used but i created is anyway to provide Flexibility and Scalability) and perform operations that involve multiple models or complex processing. They abstract away the details of data manipulation from controllers.
 
 ## Frontend Architecture
 
