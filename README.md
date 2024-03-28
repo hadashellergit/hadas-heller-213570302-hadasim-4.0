@@ -8,8 +8,8 @@
 - npm install morgan
 - npm install multer
 
-install in client side:
-npm install axios
+**install in client side:**
+- npm install axios
 - npm install react-chartjs-2 chart.js
 - npm install chartjs-adapter-date-fns
 
@@ -70,6 +70,9 @@ The database schema consists of the following tables:
 - **Express.js**: Provides a framework for building RESTful APIs in Node.js.
 - **React**: Used for building the frontend user interface.
 - **MySQL**: The chosen relational database management system for storing application data.
+
+## database diagram
+![Alt text](/theReadMeImg.png "Optional title")
 
 
 

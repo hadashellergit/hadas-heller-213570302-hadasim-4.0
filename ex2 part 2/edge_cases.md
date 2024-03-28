@@ -65,7 +65,6 @@ the following segment has been standardized and spell-checked by ChatGPT. The or
 
 By addressing these edge cases, the system can ensure robustness and reliability in handling various user interactions and scenarios.
 
-By addressing these edge cases, the system can ensure robustness and reliability in handling various user interactions and scenarios.
 
 
 
