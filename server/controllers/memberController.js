@@ -1,5 +1,5 @@
 const memberService = require('../services/memberService');
-
+const { validateForm } = require('../validationHelpFunction');
 //GET
 const getAllMembers = async (req, res) => {
   try { 
@@ -43,7 +43,7 @@ const createMember = async (req, res) => {
   try {
     const { id, first_name, last_name, city, street, street_number, birth_date, phone, mobile_phone } = req.body;
 
-    // required field validation
+    // required field validation //replace this by sending to generic vlidation function
     if (!id || !first_name || !last_name || !city || !street || !street_number || !birth_date || !phone || !mobile_phone) {
       return res.status(400).json({ error: 'all fields are required' });
     }
