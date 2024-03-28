@@ -9,7 +9,7 @@ The system architecture follows a Model-View-Controller (MVC) pattern, where the
 
 ## Folder Structure
 
-The project has the following folder structure:
+My project has the following folder structure:
 
 - **server**: Contains the backend code written in Node.js.
   - **controllers**: Contains the controller logic for handling HTTP requests.
@@ -17,7 +17,7 @@ The project has the following folder structure:
   - **routes**: Contains the routing logic to map HTTP requests to controller actions.
   - **uploads**: Used to store uploaded files.
   - **config**: Contains the db.js.
-  - **services**: Contains the business logic encapsulated in service modules.
+  - **services**: Contains the business logic encapsulated in service modules - because the app was very simple the services in the app dont do much. i added this layer to create a strong foundation to the project.
 - **client**: Contains the frontend code written in React.
 
 ## Database  
