@@ -1,5 +1,5 @@
 const memberService = require('../services/memberService');
-const { validateForm } = require('../validationHelpFunction');
+
 //GET
 const getAllMembers = async (req, res) => {
   try { 
