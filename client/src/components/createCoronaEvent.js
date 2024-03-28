@@ -16,7 +16,7 @@ const CreateCoronaEvent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      //send http to posst corona data in table
+      //send http to posst coronadata in table
       await axios.post('http://localhost:3001/api/corona/coronaEvent', formData); 
       alert('Event created successfully!');
     } catch (error) {
@@ -39,36 +39,36 @@ const CreateCoronaEvent = () => {
   };
 
   return (
-    <div className="app-container">
-      <form className="form-container" onSubmit={handleSubmit}>
+    <div className="app-container2">
+      <form className="form-container2" onSubmit={handleSubmit}>
         <form>
-  <div className="form-group">
+  <div className="form-group2">
     <label htmlFor="member_id">ID:</label>
     <input
       type="text"
-      className="input-field"
+      className="input-field2"
       id="member_id"
       name="member_id"
       value={formData.id}
       onChange={handleChange}
     />
   </div>
-  <div className="form-group">
+  <div className="form-group2">
     <label htmlFor="positive_test_date">Positive Test Date:</label>
     <input
       type="date"
-      className="input-field"
+      className="input-field2"
       id="positive_test_date"
       name="positive_test_date"
       value={formData.positive_test_date}
       onChange={handleChange}
     />
   </div>
-  <div className="form-group">
-    <label htmlFor="recovery_date">Recovery Date:</label>
+  <div className="form-group2">
+    <label htmlFor="recovery_date2">Recovery Date:</label>
     <input
       type="date"
-      className="input-field"
+      className="input-field2"
       id="recovery_date"
       name="recovery_date"
       value={formData.recovery_date}
@@ -77,7 +77,7 @@ const CreateCoronaEvent = () => {
   </div>
 </form>
 
-        <button type="submit" className="submit-button">Create</button>
+        <button type="submit" className="submit-button2">Create</button>
       </form>
     </div>
   );

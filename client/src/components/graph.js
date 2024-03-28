@@ -60,7 +60,9 @@ const Graph = () => {
     return (
         <div>
             <h3>30 days sick member count</h3>
-            <Line data={chartData} options={options} />           
+            <div>
+            <Line data={chartData} options={options} />  
+            </div>         
         </div>
     );
 };

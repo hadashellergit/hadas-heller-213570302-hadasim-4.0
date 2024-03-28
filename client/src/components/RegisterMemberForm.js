@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../style/register.css';
 
 const RegisterMemberForm = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ const RegisterMemberForm = () => {
       console.error('Error registering member:', error);
       alert('An error occurred while registering member. Please try again.');
     }
-    //empty form filed
+    //set form fields
     setFormData({
       id:'',
       first_name: '',
@@ -46,6 +47,7 @@ const RegisterMemberForm = () => {
   };
 
   return (
+    <div>
     <div className="register-container">
       <h2>Register Member</h2>
       <form className="register-form" onSubmit={handleSubmit}>
@@ -101,6 +103,7 @@ const RegisterMemberForm = () => {
         </div>
         <button type="submit">Register</button>
       </form>
+    </div>
     </div>
   );
 };
