@@ -14,7 +14,7 @@ const find = async () => {
 };
 const findById = async (memberId) => {
   try {
-    const member = await db.query('SELECT * FROM personaldata where id=');
+    const member = await db.query('SELECT * FROM personaldata where id=', [id]);
     return member;
   } catch (error) {
     throw error;
