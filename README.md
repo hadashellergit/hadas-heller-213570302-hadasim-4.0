@@ -11,7 +11,7 @@ npm install multer
 install in client side:
 npm install axios
 npm install react-chartjs-2 chart.js
-npm install chartjs-adapter-date-fns
+# npm install chartjs-adapter-date-fns
 
 
 # Architectural Specification
