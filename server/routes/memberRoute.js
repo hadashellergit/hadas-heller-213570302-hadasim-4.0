@@ -7,6 +7,8 @@ const upload = multer({ dest: 'uploads/' });
 
 //GET
 router.get('/getAllMembers', memberController.getAllMembers);
+router.get('/:id', memberController.getMemberById);
+
 
 //POST
 router.post('/createMember', memberController.createMember);
