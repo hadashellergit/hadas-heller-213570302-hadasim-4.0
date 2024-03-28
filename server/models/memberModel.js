@@ -12,6 +12,14 @@ const find = async () => {
     throw error;
   }
 };
+const findById = async (memberId) => {
+  try {
+    const member = await db.query('SELECT * FROM personaldata where id=');
+    return member;
+  } catch (error) {
+    throw error;
+  }
+};
 
 //POST
 const create = async (memberData) => {
@@ -43,6 +51,7 @@ const postImage =async (memberId, imagePath) => {
 }
 module.exports = {
   find,
+  findById,
   create,
   postImage
 };
