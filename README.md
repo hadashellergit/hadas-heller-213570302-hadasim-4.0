@@ -43,7 +43,7 @@ The project has the following folder structure:
 - http://localhost:3001/api/member/getAllMembers - GET a list of all of the members in the HMO (...)
 - http://localhost:3001/api/vaccinations/unVaccinatedMembersCounter - GET the count of hmo members that didnt had any vaccin (...)
 ## database diagram
-![Alt text](/theReadMeImg/sqlDiagram.png "Optional title")
+![Alt text](./client/theReadMeImg/sqlDiagram.png "Optional title")
 
 ## in order to get started run the sql query (in createDataBase.sql) in the server terminal , then run ` node server.js` in the server and `npm start` in the client
 
@@ -64,22 +64,22 @@ The project has the following folder structure:
 
 
 ## the member list is displayed with the user data and two options, uplaoding img ot posting a vaccination data
-![Alt text](/theReadMeImg/memberTable.png "Optional title")
+![Alt text](./client/theReadMeImg/memberTable.png "Optional title")
  
  ## vaccination data womdow will apear for user to use
-![Alt text](/theReadMeImg/vaccination.png "Optional title")
+![Alt text](./client/theReadMeImg/vaccination.png "Optional title")
 
 ## the ui user can post corona data positive test date and recovery (or only positve test date)
-![Alt text](/theReadMeImg/coronaEvent.png "Optional title")
+![Alt text](./client/theReadMeImg/coronaEvent.png "Optional title")
 
 ## there will be dislayed a graph with the count of sick patients for the past 30 days
-![Alt text](/theReadMeImg/chart.png "Optional title")
+![Alt text](./client/theReadMeImg/chart.png "Optional title")
 
 ## and a pie chart of the ercantage of un vaccinated members out of the members
-![Alt text](/theReadMeImg/unVaccinated.png "Optional title")
+![Alt text](./client/theReadMeImg/unVaccinated.png "Optional title")
 
 ## the dashboard
-![Alt text](/theReadMeImg/dashBoard.png "Optional title")
+![Alt text](./client/theReadMeImg/dashBoard.png "Optional title")
 
 
 
