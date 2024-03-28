@@ -48,7 +48,7 @@ My project has the following folder structure:
 
 ## in order to get started run the sql query (in createDataBase.sql) in the server terminal , then run ` node server.js` in the server and `npm start` in the client
 
-**install in server side:**
+**installed in terminal**
 - npm install mysql
 - npm install express
 - npm install axios
@@ -57,8 +57,6 @@ My project has the following folder structure:
 - npm install helmet
 - npm install morgan
 - npm install multer
-
-**install in client side:**
 - npm install axios
 - npm install react-chartjs-2 chart.js
 - npm install chartjs-adapter-date-fns
