@@ -12,8 +12,6 @@ const getVaccinations = async () => {
 
 //POST
 const createVaccination = async (vaccinData) => {
-  console.log("in createvaccin service");
-  console.log(vaccinData);
   return await vaccination.create(vaccinData);
 };
 

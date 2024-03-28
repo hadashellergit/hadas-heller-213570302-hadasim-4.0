@@ -63,22 +63,22 @@ The project has the following folder structure:
 - npm install chartjs-adapter-date-fns
 
 
-## the member list is displayed with the user data and two options, uplaoding img ot posting a vaccination data
+## the member list is displayed with the user data and two options, uplaoding img or posting a vaccination 
 ![Alt text](./client/theReadMeImg/memberTable.png "Optional title")
  
- ## vaccination data womdow will apear for user to use
+ ## vaccination data wimdow will apear for user to use
 ![Alt text](./client/theReadMeImg/vaccination.png "Optional title")
 
-## the ui user can post corona data positive test date and recovery (or only positve test date)
+## post corona data positive test date and recovery (or positve test date with no recovery date)
 ![Alt text](./client/theReadMeImg/coronaEvent.png "Optional title")
 
-## there will be dislayed a graph with the count of sick patients for the past 30 days
+## graph display with the count of sick patients for the past 30 days
 ![Alt text](./client/theReadMeImg/chart.png "Optional title")
 
-## and a pie chart of the ercantage of un vaccinated members out of the members
+## and a pie chart of the un vaccinated members out of the members
 ![Alt text](./client/theReadMeImg/unVaccinated.png "Optional title")
 
-## the dashboard
+## the complit dashboard
 ![Alt text](./client/theReadMeImg/dashBoard.png "Optional title")
 
 

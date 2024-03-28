@@ -37,7 +37,9 @@ const createVaccination = async (req, res) => {
     const newVaccin = await vaccinationService.createVaccination(req.body);
     res.status(201).json(newVaccin);
   } catch (error) {
-    res.status(400).json({ error: 'Invalid request' });
+    console.log("c");
+    console.log(error.message);
+    res.status(400).json({ err:error.message });
   }
 };
 

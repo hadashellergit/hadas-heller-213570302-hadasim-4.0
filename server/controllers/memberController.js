@@ -39,10 +39,8 @@ const createMember = async (req, res) => {
 
     // required field validation
     if (!id || !first_name || !last_name || !city || !street || !street_number || !birth_date || !phone || !mobile_phone) {
-      console.log('http');
       return res.status(400).json({ error: 'all fields are required' });
     }
-    console.log(req.body);
     // date format validation
     const birthDateValid = new Date(birth_date);
     if (isNaN(birthDateValid.getTime())) {

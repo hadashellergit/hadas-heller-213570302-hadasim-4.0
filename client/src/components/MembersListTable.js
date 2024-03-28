@@ -22,7 +22,7 @@ const MemberListTable = () => {
         const response = await axios.get('http://localhost:3001/api/member/getAllMembers');
         setMembers(response.data);
       } catch (error) {
-        console.error('Error fetching members:', error);
+        console.error(error.err);
         alert('An error occurred while fetching members');
       }
     };
@@ -49,7 +49,6 @@ const MemberListTable = () => {
 
       alert(response.data.message);
     } catch (error) {
-      console.error('Error uploading image:', error);
       alert('An error occurred while uploading the image');
     }
   };
@@ -73,7 +72,7 @@ const MemberListTable = () => {
       alert('vacc post successfully!');
     } catch (error) {
       console.error('Error posting vacc:', error);
-      alert('An error occurred while posting vacc. Please try again.',error);
+      alert('An error occurred while posting vacc.',error.err);
     }
     setVaccinationDate('');
     setVaccinationType('');
