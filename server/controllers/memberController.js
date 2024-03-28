@@ -10,7 +10,13 @@ const getAllMembers = async (req, res) => {
     res.status(500).json({ error: 'server error' });
   }
 };
-
+const getMemberById = async (req,res)=>{
+  try{
+    const member = await memberService.getMemberById(req.body.id)
+  }catch (error){
+     res.status(500).json({ error: 'server error' });
+  }
+};
 //POST
 const uploadImage = async (req, res) => {
   try {
@@ -64,6 +70,7 @@ const createMember = async (req, res) => {
 
 module.exports = {
     getAllMembers,
+  getMemberById,
     uploadImage,
     createMember
   };
