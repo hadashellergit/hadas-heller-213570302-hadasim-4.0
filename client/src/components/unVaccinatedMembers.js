@@ -11,7 +11,8 @@ const UnVaccinatedMembers = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:3001/api/vaccinations/unVaccinatedMembersCounter');
-                setCount(response.data); // Set count with fetched data
+                setCount(response.data);
+                console.log(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -20,7 +21,7 @@ const UnVaccinatedMembers = () => {
         const fetchMemberCount = async () => {
             try {
                 const response = await axios.get('http://localhost:3001/api/member/getAllMembers');
-                setMemberCount(response.data.length); // Set memberCount with fetched data length
+                setMemberCount(response.data.length);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -31,10 +32,11 @@ const UnVaccinatedMembers = () => {
     }, []);
 
     const data = {
+      
         labels: ['Unvaccinated', 'Vaccinated'],
         datasets: [
             {
-                data: [count, memberCount],
+                data: [count, memberCount-count],
                 backgroundColor: [
                     'orange', // Color for unvaccinated
                     'blue', // Color for vaccinated

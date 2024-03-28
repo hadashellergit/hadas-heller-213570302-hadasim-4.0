@@ -61,7 +61,6 @@ ORDER BY DATE(subdate(CURDATE(), interval d.day_number day));
     `;
     
     const data = await db.query(query);
-    console.log(data);
     return data;
   } catch (error) {
     throw error;

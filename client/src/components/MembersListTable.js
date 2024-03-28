@@ -107,7 +107,9 @@ const MemberListTable = () => {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Mobile Phone</th>
-            <th></th>
+            <th>city</th>
+            <th>street</th>
+            <th>street number</th>
             <th></th>
             <th></th>
           </tr>
@@ -119,6 +121,9 @@ const MemberListTable = () => {
               <td>{member.first_name}</td>
               <td>{member.last_name}</td>
               <td>{member.mobile_phone}</td>
+              <td>{member.city}</td>
+              <td>{member.street}</td>
+              <td>{member.street_number}</td>
               <td>
                 <input type="file" name="image" onChange={handleFileChange} />
               </td>
