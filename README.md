@@ -21,7 +21,7 @@ The project has the following folder structure:
 - **client**: Contains the frontend code written in React.
 
 ## Database  
-
+###### remember that the id fields are FOREIGN KEY with refernce to the member id 
 - **personaldata**: Stores information about members, including their personal details and uploaded images.
 - **coronadata**: Stores data related to COVID-19 tests and recovery dates for members.
 - **vaccinations**: Records vaccination details for members.
