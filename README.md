@@ -1,7 +1,7 @@
 # ex1 twitterTower
-### I used c#. the code is in the file TrittweTower.cs
+##### I used c#. the code is in the file TwitterTower.cs
 
-# ex2 corona managment 
+# ex2 COVID management 
 
 ## Overview
 
@@ -20,32 +20,7 @@ The project has the following folder structure:
   - **services**: Contains the business logic encapsulated in service modules.
 - **client**: Contains the frontend code written in React.
 
-
-## Backend Architecture
-
-### Controllers
-
-Controllers handle incoming HTTP requests, process them, and return appropriate responses. They act as intermediaries between the client and the server's business logic.
-
-### Models
-
-Models represent the data entities in the system and interact directly with the database. They encapsulate database operations such as querying and updating data.
-
-### Routes
-
-Routes define the API endpoints and map them to corresponding controller actions. They serve as a bridge between incoming requests and controller methods.
-
-### Services
-
-Services contain the application's business logic (for this assainment the services were barly used but i created is anyway to provide Flexibility and Scalability) and perform operations that involve multiple models or complex processing. They abstract away the details of data manipulation from controllers.
-
-## Frontend Architecture
-
-The frontend is built using React, a JavaScript library for building user interfaces. React components are organized into a component tree and render based on the application state.
-
-## Database Schema
-
-The database schema consists of the following tables:
+## Database  
 
 - **personaldata**: Stores information about members, including their personal details and uploaded images.
 - **coronadata**: Stores data related to COVID-19 tests and recovery dates for members.
@@ -58,6 +33,15 @@ The database schema consists of the following tables:
 - **React**: Used for building the frontend user interface.
 - **MySQL**: The chosen relational database management system for storing application data.
 
+## api/
+- http://localhost:3001/api/corona/coronaEvent -  POST a positive date and id and an optinal recovery date (the route map the http request and to the requiered controller);
+- http://localhost:3001/api/corona/getCoronaChartData - GET an object with the fileds date and count (...) 
+- http://localhost:3001/api/member/getAllMembers - GET all the row from personal data table (...)
+- http://localhost:3001/api/member/uploadImage - POST the img in as blob objevt in table (...)
+- http://localhost:3001/api/vaccinations/createVaccination - POST vaccine data (...)
+- http://localhost:3001/api/member/createMember - POST new member in to the members table (...)
+- http://localhost:3001/api/member/getAllMembers - GET a list of all of the members in the HMO (...)
+- http://localhost:3001/api/vaccinations/unVaccinatedMembersCounter - GET the count of hmo members that didnt had any vaccin (...)
 ## database diagram
 ![Alt text](/theReadMeImg/sqlDiagram.png "Optional title")
 

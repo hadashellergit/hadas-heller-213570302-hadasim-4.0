@@ -25,25 +25,26 @@ const RegisterMemberForm = () => {
     e.preventDefault();
     try {
       //sent http with the form data to post a member
-      await axios.post('http://localhost:3001/api/member/createMember', formData); 
+      await axios.post('http://localhost:3001/api/member/createMember', formData);
+      setFormData({
+        id:'',
+        first_name: '',
+        last_name: '',
+        city: '',
+        street: '',
+        street_number: '',
+        birth_date: '',
+        phone: '',
+        mobile_phone: '',
+        image_data: null
+      }); 
       alert('Member registered successfully!');
     } catch (error) {
       console.error('Error registering member:', error);
       alert('An error occurred while registering member. Please try again.');
     }
     //set form fields
-    setFormData({
-      id:'',
-      first_name: '',
-      last_name: '',
-      city: '',
-      street: '',
-      street_number: '',
-      birth_date: '',
-      phone: '',
-      mobile_phone: '',
-      image_data: null
-    });
+
   };
 
   return (
