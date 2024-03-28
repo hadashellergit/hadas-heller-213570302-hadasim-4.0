@@ -72,7 +72,7 @@ The database schema consists of the following tables:
 - **MySQL**: The chosen relational database management system for storing application data.
 
 ## database diagram
-![Alt text](/theReadMeImg/sqlDiagram.png.png "Optional title")
+![Alt text](/theReadMeImg/sqlDiagram.png "Optional title")
 
 
 
