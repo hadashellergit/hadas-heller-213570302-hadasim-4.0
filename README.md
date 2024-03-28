@@ -1,21 +1,6 @@
-**install in server side:**
-- npm install mysql
-- npm install express
-- npm install axios
-- npm install cors
-- npm install mysql@latest
-- npm install helmet
-- npm install morgan
-- npm install multer
+# ex1 - For the twittertower ex i used c# 
 
-**install in client side:**
-- npm install axios
-- npm install react-chartjs-2 chart.js
-- npm install chartjs-adapter-date-fns
-
-
-
-# Architectural Specification
+# x2 - Hmo corona managment system
 
 ## Overview
 
@@ -72,9 +57,26 @@ The database schema consists of the following tables:
 - **React**: Used for building the frontend user interface.
 - **MySQL**: The chosen relational database management system for storing application data.
 
+## database diagram
+![Alt text](/theReadMeImg/sqlDiagram.png "Optional title")
 
-## the dashboard
-![Alt text](/theReadMeImg/dashBoard.png "Optional title")
+## in order to get started run the sql query (in createDataBase.sql) in the server terminal , then run ` node server.js` in the server and `npm start` in the client
+
+**install in server side:**
+- npm install mysql
+- npm install express
+- npm install axios
+- npm install cors
+- npm install mysql@latest
+- npm install helmet
+- npm install morgan
+- npm install multer
+
+**install in client side:**
+- npm install axios
+- npm install react-chartjs-2 chart.js
+- npm install chartjs-adapter-date-fns
+
 
 ## the member list is displayed with the user data and two options, uplaoding img ot posting a vaccination data
 ![Alt text](/theReadMeImg/memberTable.png "Optional title")
@@ -91,8 +93,9 @@ The database schema consists of the following tables:
 ## and a pie chart of the ercantage of un vaccinated members out of the members
 ![Alt text](/theReadMeImg/unVaccinated.png "Optional title")
 
-## database diagram
-![Alt text](/theReadMeImg/sqlDiagram.png "Optional title")
+## the dashboard
+![Alt text](/theReadMeImg/dashBoard.png "Optional title")
+
 
 
 
