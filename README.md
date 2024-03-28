@@ -77,7 +77,7 @@ My project has the following folder structure:
 ## and a pie chart of the un vaccinated members out of the members
 ![Alt text](./client/theReadMeImg/unVaccinated.png "Optional title")
 
-## the complit dashboard
+## the dashboard
 ![Alt text](./client/theReadMeImg/dashBoard.png "Optional title")
 
 
