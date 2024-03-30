@@ -40,8 +40,6 @@ const uploadImage = async (req, res) => {
   }
 };
 
-// In your controller file
-
 const createMember = async (req, res) => {
   try {
     const requiredFields = ['id', 'first_name', 'last_name', 'city', 'street', 'street_number', 'birth_date', 'phone', 'mobile_phone'];
