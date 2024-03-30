@@ -1,8 +1,8 @@
 const db = require('../config/db');
 
-// Function to check if previous vaccinations are late
+// function to check if previous vaccinations are late
 const checkVaccinationDates = async (memberId, givenDate) => {
-  //chacks the number of later vaccination dates in the table to inform the user
+  //checks the number of later vaccination dates in the table to inform the user
   try {
     const query = `
       SELECT COUNT(*) AS invalid_count
@@ -64,5 +64,5 @@ module.exports = {
   find,
   findUnVaccinatedCount,
   create,
-  checkVaccinationDates // Add the checkVaccinationDates function to module exports
+  checkVaccinationDates 
 };
