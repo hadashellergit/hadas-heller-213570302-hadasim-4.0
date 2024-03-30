@@ -2,7 +2,7 @@
 - I used c#. the code is in the file TwitterTower.cs (if you cant execute it this is my git repository to the ex1 https://github.com/hadashellergit/hadas_heller_213570302_ex1)
 
 # ex2 COVID management 
-
+# Architectural Specification
 ## Overview
 
 The system architecture follows a Model-View-Controller (MVC) pattern, where the application is divided into three main components: models, views, and controllers. Additionally, services are used to encapsulate business logic and interact with models.
@@ -47,7 +47,7 @@ My project has the following folder structure:
 ![Alt text](./client/theReadMeImg/sqlDiagram.png "Optional title")
 
 ## in order to get started run the sql query (in createDataBase.sql) in the server terminal , then run ` node server.js` in the server and `npm start` in the client
-- (after installing)
+
 **installed in terminal**
 - npm install mysql
 - npm install express
