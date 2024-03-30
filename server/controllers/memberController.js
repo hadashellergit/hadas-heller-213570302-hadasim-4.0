@@ -1,76 +1,77 @@
 const memberService = require('../services/memberService');
+const { validateForm } = require('../validationHelpFunctions');
 
 //GET
 const getAllMembers = async (req, res) => {
-  try { 
-    //fetching the service return
+  try {
     const members = await memberService.getAllMembers();
     res.json(members);
   } catch (error) {
     res.status(500).json({ error: 'server error' });
   }
 };
-const getMemberById = async (req,res)=>{
-  try{
-    const member = await memberService.getMemberById(req.body.id)
-  }catch (error){
-     res.status(500).json({ error: 'server error' });
-  }
-};
-//POST
-const uploadImage = async (req, res) => {
+
+const getMemberById = async (req, res) => {
   try {
-    //check if file exist
-    if (!req.file) {
-      return res.status(400).json({ error: 'No file uploaded' });
-    }
-    const imagePath = req.file.path;
-    const memberId = req.body.memberId; 
-    //send the file data  to service
-    const success = await memberService.uploadImage(memberId, imagePath);
-    if (success) {
-      res.json({ message: 'uploaded succesfully' });
-    } else {
-      res.status(500).json({ error: 'failed to save img',message:'failed to save img' });
-    }
+    const member = await memberService.getMemberById(req.body.id);
+    res.json(member);
   } catch (error) {
-    console.error('error uploading img:', error);
     res.status(500).json({ error: 'server error' });
   }
 };
 
+//POST
+const uploadImage = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ error: 'No file uploaded' });
+    }
+    const imagePath = req.file.path;
+    const memberId = req.body.memberId;
+    const success = await memberService.uploadImage(memberId, imagePath);
+    if (success) {
+      res.json({ message: 'uploaded successfully' });
+    } else {
+      res.status(500).json({ error: 'failed to save image' });
+    }
+  } catch (error) {
+    console.error('error uploading image:', error);
+    res.status(500).json({ error: 'server error' });
+  }
+};
+
+// In your controller file
+
 const createMember = async (req, res) => {
   try {
-    const { id, first_name, last_name, city, street, street_number, birth_date, phone, mobile_phone } = req.body;
+    const requiredFields = ['id', 'first_name', 'last_name', 'city', 'street', 'street_number', 'birth_date', 'phone', 'mobile_phone'];
 
-    // required field validation //replace this by sending to generic vlidation function
-    if (!id || !first_name || !last_name || !city || !street || !street_number || !birth_date || !phone || !mobile_phone) {
-      return res.status(400).json({ error: 'all fields are required' });
-    }
-    // date format validation
-    const birthDateValid = new Date(birth_date);
-    if (isNaN(birthDateValid.getTime())) {
-      return res.status(400).json({ error: 'invalid birth date format' });
-    }
+    const errors = await validateForm(req.body, requiredFields);
 
-    // birth date validation
-    if (birthDateValid > new Date()) {
-      return res.status(400).json({ error: 'birth date cannot be in the future' });
+    //  errors is a promise, await its resolution before accessing its value
+    const resolvedErrors = await errors;
+
+    console.log(resolvedErrors);
+    console.log(Object.keys(resolvedErrors).length);
+
+    // check if there are errors
+    if (Object.keys(resolvedErrors).length > 0) {
+      return res.status(400).json({ errors: resolvedErrors });
     }
 
-    //send the request body to service
+    //creating the member
     const newMember = await memberService.createMember(req.body);
     res.status(201).json(newMember);
   } catch (error) {
     console.error('error creating member:', error);
-    res.status(400).json({ error: 'an error occurred while creating member',message:'an error occurred while creating member' });
+    res.status(400).json({ error: 'an error occurred while creating member' });
   }
 };
 
-
 module.exports = {
-    getAllMembers,
+  getAllMembers,
   getMemberById,
-    uploadImage,
-    createMember
-  };
+  uploadImage,
+  createMember
+};
+
