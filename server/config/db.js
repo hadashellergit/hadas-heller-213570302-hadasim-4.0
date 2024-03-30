@@ -1,15 +1,15 @@
 const mysql = require('mysql');
 
-// Create MySQL connection pool
+// create MySQL connection pool
 const pool = mysql.createPool({
-  connectionLimit: 10, // Adjust as needed
+  connectionLimit: 10, 
   host: 'localhost',
   user: 'root',
   password: 'password',
   database: 'hospital_management',
 });
 
-// Function to execute SQL queries
+// function to execute SQL queries
 const query = (sql, params) => {
   return new Promise((resolve, reject) => {
     pool.query(sql, params, (err, results) => {
