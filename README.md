@@ -46,7 +46,7 @@ My project has the following folder structure:
 ## database diagram
 ![Alt text](./client/theReadMeImg/sqlDiagram.png "Optional title")
 
-## in order to get started run the sql query (in createDataBase.sql) in the server terminal , then run ` node server.js` in the server and `npm start` in the client
+## in order to get started run the sql query (in createDataBase.sql) in the server terminal , then run ` npm start` in the server and `npm start` in the client, you will probebly need to run `npm install react-scripts`
 
 **installed in terminal**
 - npm install mysql
@@ -60,7 +60,6 @@ My project has the following folder structure:
 - npm install axios
 - npm install react-chartjs-2 chart.js
 - npm install chartjs-adapter-date-fns
-- npm install react-scripts
 
 ## the member list is displayed with the user data and two options, uplaoding img or posting a vaccination 
 ![Alt text](./client/theReadMeImg/memberTable.png "Optional title")
