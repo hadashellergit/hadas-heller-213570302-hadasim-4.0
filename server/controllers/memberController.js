@@ -5,7 +5,7 @@ const { validateForm } = require('../validationHelpFunctions');
 const getAllMembers = async (req, res) => {
   try {
     const members = await memberService.getAllMembers();
-    res.json(members);
+    res.status(201).json(members);
   } catch (error) {
     res.status(500).json({ error: 'server error' });
   }
@@ -14,7 +14,7 @@ const getAllMembers = async (req, res) => {
 const getMemberById = async (req, res) => {
   try {
     const member = await memberService.getMemberById(req.body.id);
-    res.json(member);
+    res.status(201).json(member);
   } catch (error) {
     res.status(500).json({ error: 'server error' });
   }
@@ -30,7 +30,7 @@ const uploadImage = async (req, res) => {
     const memberId = req.body.memberId;
     const success = await memberService.uploadImage(memberId, imagePath);
     if (success) {
-      res.json({ message: 'uploaded successfully' });
+      res.status(201).json({ message: 'uploaded successfully' });
     } else {
       res.status(500).json({ error: 'failed to save image' });
     }
